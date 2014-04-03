@@ -1,7 +1,7 @@
 name "ngx_pagespeed"
 default_version "1.7.30.4-beta"
 
-source :url => "https://github.com/pagespeed/ngx_pagespeed/archive/release-#{version}.zip", :md5 => "d31ff96f44445b0c7d147d9c3eb8ae68"
+source :url => "https://github.com/pagespeed/ngx_pagespeed/archive/release-#{version}.zip", :md5 => "91753de2262adf3cbf10e75375d1f738"
 
 dependency "psol"
 
