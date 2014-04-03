@@ -5,6 +5,15 @@ This project creates full-stack platform-specific packages for
 
 ## Installation
 
+### For Ubuntu, get the essentials
+
+```shell
+# sudo -i
+# apt-get update
+# apt-get install build-essential ruby1.9.1-dev unzip git
+# gem install bundler
+```
+
 We'll assume you have Ruby 1.9+ and Bundler installed. First ensure all
 required gems are installed and ready to use:
 
