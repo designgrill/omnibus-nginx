@@ -73,7 +73,7 @@ build do
            "--with-pcre",
            "--with-pcre-jit",
            "--with-ld-opt=\"-pie -L#{install_dir}/embedded/lib -Wl,-rpath,#{install_dir}/embedded/lib -lssl -lcrypto -ldl -lz\"",
-           "--with-cc-opt=\"-fPIC -L#{install_dir}/embedded/lib -I#{install_dir}/embedded/include\"",
+           "--with-cc-opt=\"-fPIC -L#{install_dir}/embedded/lib -I#{install_dir}/embedded/include -I#{install_dir}/embedded/include/libxml2\"",
            "--add-module=#{source_dir}/ngx_http_gunzip_filter_module",
            "--add-module=#{source_dir}/ngx_http_filter_cache",
            "--add-module=#{source_dir}/nginx_upstream_check_module",
