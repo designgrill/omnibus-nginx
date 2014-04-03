@@ -8,6 +8,8 @@ dependency "psol"
 relative_path "#{name}-release-#{version}"
 
 build do
+	command "ln -sf #{name}-#{version} ../#{name}"
+
 	block do
 		FileUtils.cp_r(File.join(source_dir, "psol"),project_dir)
 	end
