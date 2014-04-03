@@ -20,6 +20,7 @@ dependency "nginx_requestid"
 dependency "nginx_upstream_fair_module"
 dependency "nginx-sticky-module"
 dependency "nginx_tcp_proxy_module"
+dependency "ngx_pagespeed"
 
 source url: "http://openresty.org/download/ngx_openresty-#{version}.tar.gz", md5: "5e5359ae3f1b8db4046b358d84fabbc8"
 
