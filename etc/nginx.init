@@ -14,9 +14,9 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 DAEMON=/usr/sbin/nginx
 NAME=nginx
 DESC=nginx
-RESTARTPAUSE=10
-DAEMON_OPTS="-c /etc/nginx/nginx.conf -p /etc/nginx"
-PIDFILE=/var/run/$NAME.pid
+RESTARTPAUSE=1
+#DAEMON_OPTS="-c /etc/nginx/nginx.conf -p /etc/nginx"
+PIDFILE=/opt/nginx/run/$NAME.pid
 
 # Include nginx defaults if available
 if [ -f /etc/default/nginx ] ; then
@@ -64,7 +64,7 @@ restart() {
     echo -n "Restarting $DESC: "
     status && stop
     sleep $RESTARTPAUSE
-    status || start
+    start
     echo "$NAME."
 }
 
