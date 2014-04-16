@@ -10,7 +10,7 @@ relative_path "luarocks-#{version}"
 build do
   command ["./configure",
            "--prefix=#{install_dir}/embedded/luajit",
-           "--lua-suffix=jit",
+           "--lua-suffix=jit-2.1.0-alpha",
            "--with-lua=#{install_dir}/embedded/luajit",
            "--with-lua-include=#{install_dir}/embedded/luajit/include/luajit-2.1",
            "--with-lua-lib=#{install_dir}/embedded/luajit/lib"
