@@ -17,7 +17,6 @@ dependency "ngx_cache_purge"
 dependency "nginx-statsd"
 dependency "nginx_requestid"
 dependency "nginx_upstream_fair_module"
-dependency "nginx-sticky-module"
 dependency "nginx_tcp_proxy_module"
 dependency "ngx_pagespeed"
 
@@ -80,7 +79,6 @@ build do
            "--add-module=#{source_dir}/nginx-statsd",
            "--add-module=#{source_dir}/nginx_requestid",
            "--add-module=#{source_dir}/nginx_upstream_fair_module",
-           "--add-module=#{source_dir}/nginx-sticky-module",
            "--add-module=#{source_dir}/nginx_tcp_proxy_module",
            "--add-module=#{source_dir}/ngx_pagespeed"
           ].join(" "), :env => env
