@@ -22,7 +22,7 @@ dependency "nginx-sticky-module"
 dependency "nginx_tcp_proxy_module"
 dependency "ngx_pagespeed"
 
-source url: "http://openresty.org/download/ngx_openresty-#{version}.tar.gz", md5: "5e5359ae3f1b8db4046b358d84fabbc8"
+source url: "http://openresty.org/download/ngx_openresty-#{version}.tar.gz", md5: "4d7a7f3fa745d7257ac2d0edc039fd62"
 
 relative_path "ngx_openresty-#{version}"
 
