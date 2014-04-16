@@ -12,7 +12,7 @@ build do
            "--prefix=#{install_dir}/embedded/luajit",
            "--lua-suffix=jit",
            "--with-lua=#{install_dir}/embedded/luajit",
-           "--with-lua-include=#{install_dir}/embedded/luajit/include/luajit-2.0",
+           "--with-lua-include=#{install_dir}/embedded/luajit/include/luajit-2.1",
            "--with-lua-lib=#{install_dir}/embedded/luajit/lib"
           ].join(" ")
 
