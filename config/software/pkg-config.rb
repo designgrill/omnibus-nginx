@@ -60,7 +60,7 @@ configure_env =
 paths = [ "#{install_dir}/embedded/bin/pkgconfig" ]
 
 build do
-  command "./configure --prefix=#{install_dir}/embedded --disable-debug --disable-host-tool --with-internal-glib --with-pc-path=#{paths*':'}", :env => configure_env
+  command "./configure --prefix=#{install_dir}/embedded --with-libiconv --disable-debug --disable-host-tool --with-internal-glib --with-pc-path=#{paths*':'}", :env => configure_env
   command "make -j #{max_build_jobs}", :env => configure_env
   command "make -j #{max_build_jobs} install", :env => configure_env
 end
