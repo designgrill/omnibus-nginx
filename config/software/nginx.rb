@@ -12,7 +12,6 @@ dependency "pcre"
 dependency "gd"
 dependency "ngx_http_gunzip_filter_module"
 dependency "ngx_http_filter_cache"
-dependency "nginx_upstream_check_module"
 dependency "nginx_http_jsonp_module"
 dependency "ngx_cache_purge"
 dependency "nginx-statsd"
@@ -36,7 +35,6 @@ build do
 
   command "patch -p1 < #{source_dir}/nginx_tcp_proxy_module/tcp.patch", cwd: "#{project_dir}/bundle/nginx-1.5.11"
   command "patch -p1 < #{source_dir}/ngx_http_filter_cache/core.diff", cwd: "#{project_dir}/bundle/nginx-1.5.11"
-  command "patch -p1 < #{source_dir}/nginx_upstream_check_module/check_1.2.6+.patch",  cwd: "#{project_dir}/bundle/nginx-1.5.11"
 
   command ["./configure",
            "--prefix=#{install_dir}/embedded",
@@ -77,7 +75,6 @@ build do
            "--with-cc-opt=\"-fPIC -L#{install_dir}/embedded/lib -I#{install_dir}/embedded/include -I#{install_dir}/embedded/include/libxml2\"",
            "--add-module=#{source_dir}/ngx_http_gunzip_filter_module",
            "--add-module=#{source_dir}/ngx_http_filter_cache",
-           "--add-module=#{source_dir}/nginx_upstream_check_module",
            "--add-module=#{source_dir}/nginx_http_jsonp_module",
            "--add-module=#{source_dir}/ngx_cache_purge",
            "--add-module=#{source_dir}/nginx-statsd",
