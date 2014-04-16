@@ -1,7 +1,7 @@
 require "fileutils"
 
 name "nginx"
-version "1.4.3.6"
+version "1.5.11.1"
 
 dependency "geoip"
 dependency "zlib"
