@@ -34,9 +34,9 @@ build do
     "LD_RUN_PATH" => "#{install_dir}/embedded/lib"
   }
 
-  command "patch -p1 < #{source_dir}/nginx_tcp_proxy_module/tcp.patch", cwd: "#{project_dir}/bundle/nginx-1.4.3"
-  command "patch -p1 < #{source_dir}/ngx_http_filter_cache/core.diff", cwd: "#{project_dir}/bundle/nginx-1.4.3"
-  command "patch -p1 < #{source_dir}/nginx_upstream_check_module/check_1.2.6+.patch",  cwd: "#{project_dir}/bundle/nginx-1.4.3"
+  command "patch -p1 < #{source_dir}/nginx_tcp_proxy_module/tcp.patch", cwd: "#{project_dir}/bundle/nginx-1.5.11"
+  command "patch -p1 < #{source_dir}/ngx_http_filter_cache/core.diff", cwd: "#{project_dir}/bundle/nginx-1.5.11"
+  command "patch -p1 < #{source_dir}/nginx_upstream_check_module/check_1.2.6+.patch",  cwd: "#{project_dir}/bundle/nginx-1.5.11"
 
   command ["./configure",
            "--prefix=#{install_dir}/embedded",
